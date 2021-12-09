@@ -48,8 +48,10 @@ Plug 'https://github.com/chriskempson/base16-vim'
 Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/sheerun/vim-polyglot'
+Plug 'https://github.com/dense-analysis/ale'
 call plug#end()
 
 source ~/.vim/base16-vim.vim
 source ~/.vim/ctrlp.vim
+source ~/.vim/ale.vim
 "------------------------------------------------------------------------------
