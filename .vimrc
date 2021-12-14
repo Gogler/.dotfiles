@@ -9,12 +9,15 @@ set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%0
 set laststatus=2 cmdheight=2 showcmd wildmenu
 
 set scrolloff=8 sidescrolloff=8
-set list
 
 " Show trailing whitespace and tab:
-:highlight ExtraWhitespace ctermbg=red guibg=red
-:match ExtraWhitespace /\s\+$/
-:match ExtraWhitespace /\s\+$\| \+\ze\t/
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+set list
 "------------------------------------------------------------------------------
 " Key maps
 "------------------------------------------------------------------------------
@@ -31,6 +34,9 @@ nmap <leader>h :nohls<cr>
 nmap <leader>Q :bufdo bdelete<cr>
 
 map gf :edit <cfile><cr>
+
+vmap <leader>y :w! /tmp/vitmp<cr>
+nmap <leader>p :r! cat /tmp/vitmp<cr>
 
 cmap w!! w !sudo tee > /dev/null %
 command! CLEAN retab | %s/ \+$//
@@ -49,6 +55,7 @@ Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/sheerun/vim-polyglot'
 Plug 'https://github.com/dense-analysis/ale'
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 source ~/.vim/base16-vim.vim

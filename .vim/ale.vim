@@ -3,11 +3,14 @@
 "------------------------------------------------------------------------------
 let g:ale_fixers = {
             \ '*': ['remove_trailing_lines', 'trim_whitespace'],
-            \ 'cpp': ['clang-format'],
             \ }
 "------------------------------------------------------------------------------
 " Key maps
 "------------------------------------------------------------------------------
+nmap <leader>k <Plug>(ale_previous_wrap)
+nmap <leader>j <Plug>(ale_next_wrap)
+nmap <leader>t <Plug>(ale_toggle)
+
 nmap <leader>g <Plug>(ale_go_to_definition)
 nmap <leader>i <Plug>(ale_hover)
 nmap <leader>r :ALERename<cr>
