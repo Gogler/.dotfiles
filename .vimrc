@@ -5,19 +5,11 @@ set shiftwidth=4 tabstop=4 softtabstop=4 autoindent expandtab smartindent cinden
 set hidden
 
 set hlsearch incsearch ignorecase smartcase nowrap number
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 set laststatus=2 cmdheight=2 showcmd wildmenu
 
 set scrolloff=8 sidescrolloff=8
-
-" Show trailing whitespace and tab:
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
 set list
+
 "------------------------------------------------------------------------------
 " Key maps
 "------------------------------------------------------------------------------
@@ -56,9 +48,14 @@ Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/sheerun/vim-polyglot'
 Plug 'https://github.com/dense-analysis/ale'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'preservim/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 source ~/.vim/base16-vim.vim
 source ~/.vim/ctrlp.vim
 source ~/.vim/ale.vim
+source ~/.vim/nerdtree.vim
+source ~/.vim/vim-airline.vim
 "------------------------------------------------------------------------------

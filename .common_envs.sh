@@ -8,6 +8,7 @@ alias cdwork='cd $WORK_DIR'
 #------------------------------------------------------------------------------
 # Exports
 #------------------------------------------------------------------------------
-export WORK_DIR=
-
-source $HOME/envs.sh
+export LOCAL_ENVS_FILE=~/envs.sh
+if [[ -f $LOCAL_ENVS_FILE ]]; then
+    source $LOCAL_ENVS_FILE
+fi
