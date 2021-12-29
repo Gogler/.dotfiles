@@ -43,7 +43,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/chriskempson/base16-vim'
-Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/sheerun/vim-polyglot'
 Plug 'https://github.com/dense-analysis/ale'
@@ -51,11 +50,15 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'preservim/nerdcommenter'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 source ~/.vim/base16-vim.vim
-source ~/.vim/ctrlp.vim
 source ~/.vim/ale.vim
 source ~/.vim/nerdtree.vim
 source ~/.vim/vim-airline.vim
+source ~/.vim/nerdcommenter.vim
+source ~/.vim/fzf.vim
 "------------------------------------------------------------------------------

@@ -32,3 +32,5 @@ base16_monokai
 
 
 source ~/.common_envs.sh
+source $FZF_DIR/shell/key-bindings.zsh
+source $FZF_DIR/shell/completion.zsh
