@@ -5,7 +5,7 @@ set shiftwidth=4 tabstop=4 softtabstop=4 autoindent expandtab smartindent cinden
 set hidden
 
 set hlsearch incsearch ignorecase smartcase nowrap number
-set laststatus=2 cmdheight=2 showcmd wildmenu
+set laststatus=2 cmdheight=1 showcmd wildmenu
 
 set scrolloff=8 sidescrolloff=8
 set list
@@ -27,8 +27,8 @@ nmap <leader>Q :bufdo bdelete<cr>
 
 map gf :edit <cfile><cr>
 
-vmap <leader>y :w! /tmp/vitmp<cr>
-nmap <leader>p :r! cat /tmp/vitmp<cr>
+vmap <leader>cy :w! /tmp/vitmp<cr>
+nmap <leader>cp :r! cat /tmp/vitmp<cr>
 
 cmap w!! w !sudo tee > /dev/null %
 command! CLEAN retab | %s/ \+$//
