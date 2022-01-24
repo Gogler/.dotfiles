@@ -3,6 +3,7 @@
 "------------------------------------------------------------------------------
 let g:ale_fixers = {
             \ '*': ['remove_trailing_lines', 'trim_whitespace'],
+            \   'cpp': ['clang-format'],
             \ }
 let g:ale_linters = {
             \   'cpp': ['clangd'],
@@ -20,6 +21,7 @@ nmap <leader>ag <Plug>(ale_go_to_definition)
 nmap <leader>ai <Plug>(ale_hover)
 nmap <leader>ar :ALERename<cr>
 nmap <leader>af <Plug>(ale_find_references)
+nmap <leader>aF :ALERepeatSelection<cr>
 
 nmap <F8> <Plug>(ale_fix)
 "------------------------------------------------------------------------------

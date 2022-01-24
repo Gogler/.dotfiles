@@ -21,6 +21,7 @@ fi
 
 #typewritten config
 fpath+=$HOME/.zsh/typewritten
+export TYPEWRITTEN_CURSOR="block"
 autoload -U promptinit; promptinit
 prompt typewritten
 
@@ -28,8 +29,6 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
     eval "$("$BASE16_SHELL/profile_helper.sh")"
-base16_monokai
-
 
 source ~/.common_envs.sh
 source $FZF_DIR/shell/key-bindings.zsh

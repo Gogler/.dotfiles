@@ -1,10 +1,10 @@
 #!/bin/bash
 
-#alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-#echo ".dotfiles" >> .gitignore
-#git clone --bare <git-repo-url> $HOME/.dotfiles
-#config checkout
-#config config --local status.showUntrackedFiles no
+git clone --bare https://github.com/Gogler/.dotfiles.git $HOME/.dotfiles
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+echo ".dotfiles" >> .gitignore
+config checkout
+config config --local status.showUntrackedFiles no
 
 # Terminal colors
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
