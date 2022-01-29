@@ -7,7 +7,6 @@ ZSH_THEME=""
 plugins=(
     git
     zsh-autosuggestions
-    dirhistory
     zsh-syntax-highlighting
 )
 
