@@ -1,7 +1,7 @@
 "------------------------------------------------------------------------------
 " General settings
 "------------------------------------------------------------------------------
-set shiftwidth=4 tabstop=4 softtabstop=4 autoindent expandtab smartindent cindent
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab autoindent smartindent cindent
 set hidden
 
 set hlsearch incsearch ignorecase smartcase nowrap number
@@ -27,8 +27,8 @@ nmap <leader>Q :bufdo bdelete<cr>
 
 map gf :edit <cfile><cr>
 
-vmap <leader>cy :w! /tmp/vitmp<cr>
-nmap <leader>cp :r! cat /tmp/vitmp<cr>
+vmap <leader>cy "+y
+nmap <leader>cp "+p
 
 cmap w!! w !sudo tee > /dev/null %
 command! CLEAN retab | %s/ \+$//
@@ -50,7 +50,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'preservim/nerdcommenter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 call plug#end()
@@ -59,6 +58,5 @@ source ~/.vim/base16-vim.vim
 source ~/.vim/ale.vim
 source ~/.vim/nerdtree.vim
 source ~/.vim/vim-airline.vim
-source ~/.vim/nerdcommenter.vim
 source ~/.vim/fzf.vim
 "------------------------------------------------------------------------------

@@ -3,7 +3,7 @@
 "------------------------------------------------------------------------------
 let g:ale_fixers = {
             \ '*': ['remove_trailing_lines', 'trim_whitespace'],
-            \   'cpp': ['clang-format'],
+            \   'cpp': ['clang-format', 'remove_trailing_lines', 'trim_whitespace'],
             \ }
 let g:ale_linters = {
             \   'cpp': ['clangd'],
