@@ -1,5 +1,6 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+source ~/.common_envs.sh
+source $FZF_DIR/shell/key-bindings.zsh
+source $FZF_DIR/shell/completion.zsh
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -23,12 +24,3 @@ fpath+=$HOME/.zsh/typewritten
 export TYPEWRITTEN_CURSOR="block"
 autoload -U promptinit; promptinit
 prompt typewritten
-
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-    eval "$("$BASE16_SHELL/profile_helper.sh")"
-
-source ~/.common_envs.sh
-source $FZF_DIR/shell/key-bindings.zsh
-source $FZF_DIR/shell/completion.zsh
