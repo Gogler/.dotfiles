@@ -9,7 +9,8 @@ set laststatus=2 cmdheight=1 showcmd wildmenu
 
 set scrolloff=8 sidescrolloff=8
 set list
-
+set wrap
+set mouse=
 "------------------------------------------------------------------------------
 " Key maps
 "------------------------------------------------------------------------------
