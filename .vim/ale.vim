@@ -4,13 +4,16 @@
 let g:ale_fixers = {
             \ '*': ['remove_trailing_lines', 'trim_whitespace'],
             \   'cpp': ['clang-format', 'remove_trailing_lines', 'trim_whitespace'],
+            \   'c': ['clang-format', 'remove_trailing_lines', 'trim_whitespace']
             \ }
 let g:ale_linters = {
-            \   'cpp': ['clangd', 'clangtidy']
+            \   'cpp': ['clangd', 'cspell'],
+            \   'c': ['clangd', 'cspell']
             \}
 
 let g:ale_floating_preview=1
 let g:ale_completion_enabled = 1
+let g:ale_cpp_clangd_executable="--fallback-style=llvm"
 "------------------------------------------------------------------------------
 " Key maps
 "------------------------------------------------------------------------------
