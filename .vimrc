@@ -44,7 +44,7 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'https://github.com/chriskempson/base16-vim'
+Plug 'tinted-theming/base16-vim'
 Plug 'https://github.com/tpope/vim-fugitive'
 Plug 'https://github.com/sheerun/vim-polyglot'
 Plug 'https://github.com/dense-analysis/ale'
