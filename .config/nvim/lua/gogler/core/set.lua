@@ -13,7 +13,7 @@ vim.o.incsearch = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
-vim.o.nowrap = true
+vim.o.wrap = false
 
 vim.o.number= true
 vim.o.laststatus = 2

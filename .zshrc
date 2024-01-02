@@ -24,11 +24,10 @@ export TYPEWRITTEN_CURSOR="block"
 autoload -U promptinit; promptinit
 prompt typewritten
 
-source $FZF_DIR/shell/key-bindings.zsh
-source $FZF_DIR/shell/completion.zsh
-
 ## Base16 Shell
-#BASE16_SHELL="$HOME/.config/base16-shell/"
-#[ -n "$PS1" ] && \
-#    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-#        source "$BASE16_SHELL/profile_helper.sh"
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        source "$BASE16_SHELL/profile_helper.sh"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

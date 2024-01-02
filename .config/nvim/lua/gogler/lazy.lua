@@ -11,4 +11,4 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("gogler.plugins")
+require("lazy").setup({{import = "gogler.plugins"}, {import = "gogler.plugins.lsp"}})
