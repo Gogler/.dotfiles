@@ -12,7 +12,7 @@ vim.keymap.set("c", "w!!", "w !sudo tee > /dev/null %")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
-vim.keymap.set("x", "<leader>p", [["_dp]])
+vim.keymap.set({"n", "v"}, "<leader>P", [["+p]])
 -- next greatest remap ever : asbjornHaland
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
