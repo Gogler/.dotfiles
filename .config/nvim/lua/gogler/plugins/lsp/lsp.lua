@@ -73,6 +73,10 @@ return {
                 capabilities = capabilities,
             })
 
+            lspconfig.hls.setup({
+                capabilities = capabilities,
+            })
+
             local opts = {}
             vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
             vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, opts)
