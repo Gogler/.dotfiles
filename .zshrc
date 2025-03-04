@@ -7,7 +7,6 @@ plugins=(
     git
     zsh-autosuggestions
     zsh-syntax-highlighting
-    base16-shell
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -24,10 +23,8 @@ export TYPEWRITTEN_CURSOR="block"
 autoload -U promptinit; promptinit
 prompt typewritten
 
-## Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        source "$BASE16_SHELL/profile_helper.sh"
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

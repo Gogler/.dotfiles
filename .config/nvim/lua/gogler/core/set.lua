@@ -37,6 +37,3 @@ vim.o.backup = false
 vim.o.guicursor = ""
 
 vim.g.mapleader = " "
-
--- Access colors present in 256 colorspace
-vim.g.base16_colorspace = 256
