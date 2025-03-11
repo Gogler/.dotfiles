@@ -37,3 +37,5 @@ vim.o.backup = false
 vim.o.guicursor = ""
 
 vim.g.mapleader = " "
+
+vim.o.clipboard="unnamedplus"
