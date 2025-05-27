@@ -11,6 +11,8 @@ return {
                     "--cross-file-rename"
                 },
             }
+
+            lspconfig.jedi_language_server.setup { }
         end,
         lazy=false,
     },
