@@ -1,4 +1,4 @@
-local tabsize = 4
+local tabsize = 2
 vim.o.tabstop=tabsize
 vim.o.softtabstop=tabsize
 vim.o.shiftwidth=tabsize
@@ -39,3 +39,4 @@ vim.o.guicursor = ""
 vim.g.mapleader = " "
 
 vim.o.clipboard="unnamedplus"
+vim.opt.winborder = "rounded"

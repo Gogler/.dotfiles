@@ -9,6 +9,12 @@ return {
     opts = {
       -- See Configuration section for options
     },
+    mappings = {
+      reset = {
+        normal = 'F11',
+        insert = 'F11',
+      },
+    },
     vim.keymap.set({"n", "v"}, "<leader>C", "<cmd>CopilotChatToggle<CR>", opts),
     vim.keymap.set({"n", "v"}, "<leader>cc", "<cmd>CopilotChatPrompts<CR>", opts)
   },

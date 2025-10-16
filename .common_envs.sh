@@ -69,8 +69,6 @@ alias cdwork='cd $WORK_DIR'
 #------------------------------------------------------------------------------
 # Exports
 #------------------------------------------------------------------------------
-export FZF_DIR=~/.vim/plugged/fzf
-export PATH=$FZF_DIR/bin:$PATH
 export LOCAL_ENVS_FILE=~/envs.sh
 export FZF_DEFAULT_OPTS="--height 40% --layout=reverse --border"
 export PATH=$HOME/.local/bin:$PATH

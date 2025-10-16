@@ -7,7 +7,8 @@ clone_and_install_tmux() {
   cd tmux
   sh autogen.sh
   ./configure --prefix=$HOME/.local
-  make -j
+  make -j install
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
   popd
 }
 
@@ -31,7 +32,7 @@ echo "Remember to reload shell before use"
 
 zsh_setup() {
 # Terminal colors
-git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+git clone https://github.com/tinted-theming/tinted-shell.git ~/.config/
 
 # Oh my ZSH configuration
 wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh

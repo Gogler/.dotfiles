@@ -8,7 +8,6 @@ set hlsearch incsearch ignorecase smartcase nowrap number
 set laststatus=2 cmdheight=1 showcmd wildmenu
 
 set scrolloff=8 sidescrolloff=8
-set list
 set wrap
 set mouse=
 set nocompatible
@@ -44,21 +43,4 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'tinted-theming/base16-vim'
-Plug 'https://github.com/tpope/vim-fugitive'
-Plug 'https://github.com/sheerun/vim-polyglot'
-Plug 'https://github.com/dense-analysis/ale'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'preservim/nerdtree'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 call plug#end()
-
-source ~/.vim/base16-vim.vim
-source ~/.vim/ale.vim
-source ~/.vim/nerdtree.vim
-source ~/.vim/vim-airline.vim
-source ~/.vim/fzf.vim
-"------------------------------------------------------------------------------
